@@ -1,0 +1,25 @@
+@{
+    ViewBag.Title = "Home";
+}
+
+<h1>@ViewBag.Message</h1>
+
+<div style="margin-top: 30px;">
+    <h2>Welcome to the Legacy Application</h2>
+    <p>This is a .NET Framework 4.8 ASP.NET MVC application that needs migration to .NET 8.</p>
+    
+    <h3>Key Legacy Technologies:</h3>
+    <ul>
+        <li>.NET Framework 4.8</li>
+        <li>ASP.NET MVC 5</li>
+        <li>Entity Framework 6</li>
+        <li>System.Web dependencies</li>
+        <li>Web.config configuration</li>
+    </ul>
+    
+    <p>
+        <a href="@Url.Action("Index", "Products")" style="display: inline-block; background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+            View Products
+        </a>
+    </p>
+</div>

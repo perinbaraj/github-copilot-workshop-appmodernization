@@ -1,0 +1,57 @@
+@model IEnumerable<LegacyWebApp.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Product Catalog</h2>
+
+<p>
+    @Html.ActionLink("Create New Product", "Create", null, new { @class = "btn-create", @style = "background: #28a745; color: white; padding: 8px 15px; text-decoration: none; border-radius: 3px;" })
+</p>
+
+<div style="margin-bottom: 20px;">
+    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+    {
+        <input type="text" name="searchTerm" placeholder="Search products..." style="padding: 8px; width: 300px;" />
+        <input type="text" name="category" placeholder="Category" style="padding: 8px; width: 150px;" />
+        <input type="submit" value="Search" style="padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer;" />
+    }
+</div>
+
+<table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr style="background: #f0f0f0;">
+            <th>Name</th>
+            <th>SKU</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Active</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.SKU)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                <td>$@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.DisplayFor(modelItem => item.StockQuantity)</td>
+                <td>@(item.IsActive ? "Yes" : "No")</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <p style="margin-top: 20px; color: #666;">No products found.</p>
+}
