@@ -114,8 +114,9 @@ cat README.md
 
 | # | Challenge | Difficulty | Duration | Key Skills |
 |---|---|---|---|---|
-| 1 | Monolith to Microservices | 🔴 Advanced | 90-120 min | Microservices, Refactoring |
-| 2 | Java 8 to 17 Migration | 🟡 Intermediate | 60-90 min | Java 17, Breaking Changes |
+| 1 | .NET Framework to .NET 8 | 🔴 Advanced | 3-4 hours | ASP.NET Core, EF Core, C# 12 |
+| 2 | Java 8 to 17 Migration | 🟡 Intermediate | 60-90 min | Java 17, Spring Boot 3, Jakarta EE |
+| 3 | AngularJS to React | 🔴 Advanced | 4-5 hours | React Hooks, TypeScript, Modern Tooling |
 
 ## 🤝 Contributing
 
