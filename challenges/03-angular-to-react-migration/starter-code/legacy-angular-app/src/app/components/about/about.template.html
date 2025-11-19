@@ -1,0 +1,81 @@
+<div class="about-container">
+    <div class="page-header">
+        <h1>
+            <span class="glyphicon glyphicon-info-sign"></span> About This Application
+        </h1>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Application Information</h3>
+        </div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <dt>Application Name:</dt>
+                <dd>{{ $ctrl.appInfo.name }}</dd>
+                
+                <dt>Version:</dt>
+                <dd>{{ $ctrl.appInfo.version }}</dd>
+                
+                <dt>Framework:</dt>
+                <dd><span class="label label-warning">{{ $ctrl.appInfo.framework }}</span></dd>
+                
+                <dt>Year:</dt>
+                <dd>{{ $ctrl.appInfo.year }}</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">⚠️ Legacy Patterns Used</h3>
+        </div>
+        <div class="panel-body">
+            <p>This application uses the following outdated patterns that need modernization:</p>
+            <ul>
+                <li ng-repeat="pattern in $ctrl.legacyPatterns">{{ pattern }}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">✅ Modern Equivalents</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Legacy Pattern</th>
+                        <th>Modern React Equivalent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in $ctrl.modernEquivalents">
+                        <td><code>{{ item.legacy }}</code></td>
+                        <td><code>{{ item.modern }}</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Migration Goals</h3>
+        </div>
+        <div class="panel-body">
+            <h4>Your mission is to:</h4>
+            <ol>
+                <li>Convert AngularJS components to React functional components</li>
+                <li>Replace $scope with React hooks (useState, useEffect, etc.)</li>
+                <li>Migrate services to custom hooks or Context API</li>
+                <li>Update routing from ngRoute to React Router</li>
+                <li>Remove jQuery dependencies</li>
+                <li>Modernize UI with current CSS framework</li>
+                <li>Add TypeScript support</li>
+                <li>Implement modern build tooling (Vite/Webpack)</li>
+            </ol>
+        </div>
+    </div>
+</div>

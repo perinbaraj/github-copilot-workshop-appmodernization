@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="taskManagerApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Task Manager - AngularJS</title>
+    
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#!/">
+                    <span class="glyphicon glyphicon-tasks"></span> Task Manager (Legacy)
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#!/tasks">Tasks</a></li>
+                <li><a href="#!/projects">Projects</a></li>
+                <li><a href="#!/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container main-content">
+        <div ng-view></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                &copy; 2020 Legacy Task Manager | Built with AngularJS 1.8 | 
+                <span class="label label-warning">LEGACY CODE</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Dependencies -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+
+    <!-- Application Files -->
+    <script src="src/app/app.module.js"></script>
+    <script src="src/app/app.config.js"></script>
+    <script src="src/app/models/task.model.js"></script>
+    <script src="src/app/services/task.service.js"></script>
+    <script src="src/app/services/project.service.js"></script>
+    <script src="src/app/services/storage.service.js"></script>
+    <script src="src/app/components/task-list/task-list.component.js"></script>
+    <script src="src/app/components/task-form/task-form.component.js"></script>
+    <script src="src/app/components/project-list/project-list.component.js"></script>
+    <script src="src/app/components/about/about.component.js"></script>
+</body>
+</html>

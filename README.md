@@ -1,29 +1,37 @@
-# GitHub Copilot Workshop - Java Application Modernization
+# GitHub Copilot Workshop - Application Modernization
 
-A hands-on workshop with practical challenges designed to help developers master GitHub Copilot for modernizing legacy Java applications. This workshop heavily utilizes the **GitHub Copilot App Modernization extension** to accelerate the modernization process. Learn to migrate to microservices and upgrade Java versions with the assistance of AI.
+A hands-on workshop with practical challenges designed to help developers master GitHub Copilot for modernizing legacy applications. This workshop heavily utilizes **GitHub Copilot and App Modernization extension** to accelerate the modernization process across multiple technology stacks.
 
 ## 🎯 Workshop Overview
 
-This workshop contains 2 comprehensive challenges that will guide you through the process of modernizing a legacy Java application using GitHub Copilot. Each challenge includes starter code, detailed instructions, solution guides, and Copilot prompting strategies.
+This workshop contains 3 comprehensive challenges that will guide you through the process of modernizing legacy applications using GitHub Copilot. Each challenge includes starter code, detailed instructions, solution guides, and Copilot prompting strategies.
 
 ## 📚 Available Challenges
 
-### 1. 🐘 Monolith to Microservices
-**Difficulty:** 🔴 Advanced | **Duration:** 90-120 minutes
-Decompose a monolithic Java application into a set of independent microservices using GitHub Copilot to identify service boundaries and refactor code.
+### 1. 🪟 .NET Framework to .NET 8 Migration
+**Difficulty:** 🔴 Advanced | **Duration:** 3-4 hours
+Migrate a legacy .NET Framework 4.8 ASP.NET MVC application to modern .NET 8, converting Entity Framework 6 to EF Core 8, and modernizing with latest C# features.
 
 ### 2. ☕️ Java 8 to 17 Migration
 **Difficulty:** 🟡 Intermediate | **Duration:** 60-90 minutes
 Upgrade a legacy Java 8 application to Java 17, leveraging Copilot to identify and fix breaking changes, and adopt new language features.
 
+### 3. 🅰️ AngularJS to React Migration
+**Difficulty:** 🔴 Advanced | **Duration:** 4-5 hours
+Migrate a legacy AngularJS 1.8 task management application to modern React 18 with TypeScript, replacing outdated patterns with hooks and modern tooling.
+
 ## 🎓 Recommended Learning Path
 
-### For Beginners to Java Modernization
-1.  **Java 8 to 17 Migration** (Challenge 2) - Get hands-on with a version upgrade.
-2.  **Monolith to Microservices** (Challenge 1) - Tackle a major architectural change.
+### For .NET Developers
+1. **Java 8 to 17 Migration** (Challenge 2) - Warm up with Java modernization
+2. **.NET Framework to .NET 8** (Challenge 1) - Deep dive into .NET migration
 
-### For Experienced Developers
-Start with any challenge based on your interests, or follow the numerical order for a comprehensive learning experience.
+### For Frontend Developers
+1. **AngularJS to React** (Challenge 3) - Framework migration skills
+2. **Java 8 to 17** (Challenge 2) - Learn backend modernization
+
+### For Full-Stack Developers
+Complete all three challenges in order to master modernization across the entire stack.
 
 ## 🏆 Skill Categories
 
@@ -32,16 +40,28 @@ Start with any challenge based on your interests, or follow the numerical order 
 - Code Analysis and Refactoring
 - AI-Assisted Migration
 - Context Management for Large Codebases
+- GitHub Copilot App Modernization Extension
 
-### ☕️ Java Language & Frameworks
+### 🪟 .NET Technologies
+- .NET Framework to .NET 8 Migration
+- ASP.NET Core
+- Entity Framework Core 8
+- C# 12 Features
+- Dependency Injection
+
+### ☕️ Java Technologies
 - Java 17 Features
-- Spring Boot
-- Maven/Gradle Dependency Management
-- MicroProfile
+- Spring Boot 3.x
+- Maven Dependency Management
+- Jakarta EE
 
-### ☁️ Cloud-Native Technologies
-- Microservices Architecture
-- REST APIs
+### 🅰️ Frontend Technologies
+- React 18 with Hooks
+- TypeScript
+- React Router v6
+- Vite Build Tool
+- Tailwind CSS
+- AngularJS Legacy Patterns
 
 ## 🗺️ How to Use This Workshop
 

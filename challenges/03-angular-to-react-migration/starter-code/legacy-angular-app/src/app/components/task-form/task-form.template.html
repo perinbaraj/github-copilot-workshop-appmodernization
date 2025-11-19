@@ -1,0 +1,116 @@
+<div class="task-form-container">
+    <div class="page-header">
+        <h1>
+            <span class="glyphicon" ng-class="$ctrl.isEditMode ? 'glyphicon-edit' : 'glyphicon-plus'"></span>
+            {{ $ctrl.isEditMode ? 'Edit Task' : 'Create New Task' }}
+        </h1>
+    </div>
+
+    <div class="form-section">
+        <form name="taskForm" ng-submit="$ctrl.saveTask()" novalidate>
+            
+            <!-- Title -->
+            <div class="form-group" ng-class="{ 'has-error': taskForm.title.$invalid && taskForm.title.$dirty }">
+                <label for="title">Task Title *</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="title"
+                       name="title"
+                       ng-model="$ctrl.task.title" 
+                       required
+                       placeholder="Enter task title">
+                <span class="help-block" ng-show="taskForm.title.$invalid && taskForm.title.$dirty">
+                    Task title is required
+                </span>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" 
+                          id="description"
+                          ng-model="$ctrl.task.description" 
+                          rows="4"
+                          placeholder="Enter task description"></textarea>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" 
+                        id="status"
+                        ng-model="$ctrl.task.status">
+                    <option value="pending">Pending</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <!-- Priority -->
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select class="form-control" 
+                        id="priority"
+                        ng-model="$ctrl.task.priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <!-- Project -->
+            <div class="form-group">
+                <label for="project">Project</label>
+                <select class="form-control" 
+                        id="project"
+                        ng-model="$ctrl.task.projectId">
+                    <option value="">Select a project</option>
+                    <option ng-repeat="project in $ctrl.projects" 
+                            ng-value="project.id">
+                        {{ project.name }}
+                    </option>
+                </select>
+            </div>
+
+            <!-- Assigned To -->
+            <div class="form-group">
+                <label for="assignedTo">Assigned To</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="assignedTo"
+                       ng-model="$ctrl.task.assignedTo" 
+                       placeholder="Enter assignee name">
+            </div>
+
+            <!-- Due Date -->
+            <div class="form-group">
+                <label for="dueDate">Due Date</label>
+                <input type="date" 
+                       class="form-control" 
+                       id="dueDate"
+                       ng-model="$ctrl.task.dueDate">
+            </div>
+
+            <!-- Error Message -->
+            <div class="alert alert-danger" ng-if="$ctrl.error">
+                {{ $ctrl.error }}
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-group">
+                <button type="submit" 
+                        class="btn btn-primary" 
+                        ng-disabled="taskForm.$invalid || $ctrl.loading">
+                    <span class="glyphicon glyphicon-save"></span>
+                    {{ $ctrl.loading ? 'Saving...' : 'Save Task' }}
+                </button>
+                <button type="button" 
+                        class="btn btn-default" 
+                        ng-click="$ctrl.cancel()"
+                        ng-disabled="$ctrl.loading">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "legacy-angular-app",
+  "version": "1.0.0",
+  "description": "Legacy AngularJS Task Management Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angularjs",
+    "legacy",
+    "task-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "angular-resource": "^1.8.2",
+    "bootstrap": "^3.4.1",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}
